@@ -39,7 +39,7 @@ class Vnins_Activator {
 			post_index varchar(255) DEFAULT NULL,
 			is_sizo int(11) DEFAULT 0,
 			UNIQUE KEY id (id)
-		);";
+		) DEFAULT CHARSET=utf8;";
 
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' ); 
 		dbDelta($sql);

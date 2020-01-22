@@ -27,7 +27,7 @@
 
 // If uninstall not called from WordPress, then exit.
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
-	global $wpdb;
-	$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}tablename");
+    global $wpdb;
+    $wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}tablename");
 	exit;
 }
