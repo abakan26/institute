@@ -29,9 +29,10 @@ class Vnins_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
+
+	public static function activate($tbname) {
 		global $wpdb;
-		$table_name = $wpdb->prefix . 'tablename';
+		$table_name = $wpdb->prefix . $tbname;
 		$sql = "CREATE TABLE $table_name (
 			id int(11) NOT NULL AUTO_INCREMENT,
 			name varchar(255) DEFAULT NULL,

@@ -36,14 +36,14 @@ if ( ! defined( 'WPINC' ) ) {
  * Rename this for your plugin and update it as you release new versions.
  */
 define( 'VNINS_VERSION', '1.0.0' );
-
+define("VNINS_DBTN", "tablename");
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-vnins-activator.php
  */
 function activate_vnins() {	
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-vnins-activator.php';
-	Vnins_Activator::activate();
+	Vnins_Activator::activate(VNINS_DBTN);
 }
 
 /**

@@ -30,7 +30,8 @@ class Vnins_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+        global $wpdb;
+        $wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}tablename");
 	}
 
 }
